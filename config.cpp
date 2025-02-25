@@ -574,6 +574,281 @@ class cfgWeapons
 			};
 		};
 	};
+	
+	// Elite Model
+	class Canik_TP9SF_Elite_Base: Pistol_Base
+	{
+		scope=0;
+		weight=1000;
+		absorbency=0;
+		repairableWithKits[]={1};
+		repairCosts[]={25};
+		PPDOFProperties[]={1,0.5,10,250,4,10};
+		WeaponLength=0.20999999;
+		ShoulderDistance=0.40000001;
+		barrelArmor=1.5;
+		chamberSize=1;
+		chamberedRound="";
+		magazines[]=
+		{
+			"Mag_Canik_TP9SF_18Rnd",
+			"Mag_Canik_TP9SF_18rnd_Red",
+			"Mag_Canik_TP9SF_18rnd_Tan",
+			"Mag_Canik_TP9SF_DrumMag_50rnd",
+			"Mag_Canik_TP9SF_Elite_18rnd"
+		};
+		chamberableFrom[]=
+		{
+			"Ammo_9x19"
+		};
+		ejectType=1;
+		recoilModifier[]={1,1,1};
+		swayModifier[]={1.1,1.1,0.80000001};
+		class NoiseShoot
+		{
+			strength=40;
+			type="shot";
+		};
+		modes[]=
+		{
+			"SemiAuto",
+			"Burst"
+		};
+		class SemiAuto: Mode_SemiAuto
+		{
+			soundSetShot[]=
+			{
+				"Glock19_Shot_SoundSet",
+				"Glock19_Tail_SoundSet",
+				"Glock19_InteriorTail_SoundSet"
+			};
+			soundSetShotExt[]=
+			{
+				
+				{
+					"Glock19_silencerPro_SoundSet",
+					"Glock19_silencerTail_SoundSet",
+					"Glock19_silencerInteriorTail_SoundSet"
+				}
+			};
+			reloadTime=0.08;
+			recoil="recoil_Glock";
+			recoilProne="recoil_Glock_prone";
+			dispersion=0.003;
+			magazineSlot="magazine";
+		};
+		class Burst: Mode_Burst
+		{
+			soundSetShot[]=
+			{
+				"Glock19_Shot_SoundSet",
+				"Glock19_Tail_SoundSet",
+				"Glock19_InteriorTail_SoundSet"
+			};
+			soundSetShotExt[]=
+			{
+				
+				{
+					"Glock19_silencerPro_SoundSet",
+					"Glock19_silencerTail_SoundSet",
+					"Glock19_silencerInteriorTail_SoundSet"
+				}
+			};
+			burst=3;
+			reloadTime=0.08;
+			dispersion=0.0020000001;
+			magazineSlot="magazine";
+		};
+		class OpticsInfo: OpticsInfoPistol
+		{
+			memoryPointCamera="eye";
+			discreteDistance[]={25};
+			discreteDistanceInitIndex=0;
+			modelOptics="-";
+			distanceZoomMin=100;
+			distanceZoomMax=100;
+		};
+		weaponStateAnim="dz\anims\anm\player\reloads\Glock\w_Glock19_states.anm";
+	};
+	
+	class Canik_TP9SF_Elite: Canik_TP9SF_Elite_Base {
+		scope=2;
+		displayName="Canik TP9SF Elite";
+		descriptionShort="TP9 SF Elite is the medium-sized model of the TP Series, having a magazine capacity of 18 rounds. The model is titled ‘Elite’ due to its ambidextrous slide stop, brand new designed trigger safety mechanism, Warren type fiber optic sights, and closed striker cover mechanism, as well as its shortened grip size. Its frame design is modified, compared to the previous TP series models, in order to ensure a comfortable experience.";
+		model="\CanikTP9SF\models\Canik_TP9SF_Elite.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Frame_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Slide_co.paa"
+		};
+		hiddenSelectionsMaterials[] = {
+			"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+			"CanikTP9SF\data\CanikTP9SF_Elite_Slide.rvmat"
+		};
+		attachments[]=
+		{
+			"pistolOptics",
+			"pistolFlashlight",
+			"pistolMuzzle"
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=150;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_damage.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_damage.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_destruct.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};
+	class Canik_TP9SF_Elite_Black: Canik_TP9SF_Elite {
+		scope=2;
+		displayName="Canik TP9SF Elite";
+		descriptionShort="TP9 SF Elite is the medium-sized model of the TP Series, having a magazine capacity of 18 rounds. The model is titled ‘Elite’ due to its ambidextrous slide stop, brand new designed trigger safety mechanism, Warren type fiber optic sights, and closed striker cover mechanism, as well as its shortened grip size. Its frame design is modified, compared to the previous TP series models, in order to ensure a comfortable experience.";
+		model="\CanikTP9SF\models\Canik_TP9SF_Elite.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Frame_Black_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Slide_Black_co.paa"
+		};
+	};	
+	class Canik_TP9SF_Elite_Wizaru: Canik_TP9SF_Elite {
+		scope=2;
+		displayName="Canik TP9SF Elite";
+		descriptionShort="TP9 SF Elite is the medium-sized model of the TP Series, having a magazine capacity of 18 rounds. The model is titled ‘Elite’ due to its ambidextrous slide stop, brand new designed trigger safety mechanism, Warren type fiber optic sights, and closed striker cover mechanism, as well as its shortened grip size. Its frame design is modified, compared to the previous TP series models, in order to ensure a comfortable experience.";
+		model="\CanikTP9SF\models\Canik_TP9SF_Elite.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Frame_Wizaru_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome_co.paa"
+		};
+	};	
+	class Canik_TP9SF_Elite_RedChrome: Canik_TP9SF_Elite {
+		scope=2;
+		displayName="Canik TP9SF Elite";
+		descriptionShort="TP9 SF Elite is the medium-sized model of the TP Series, having a magazine capacity of 18 rounds. The model is titled ‘Elite’ due to its ambidextrous slide stop, brand new designed trigger safety mechanism, Warren type fiber optic sights, and closed striker cover mechanism, as well as its shortened grip size. Its frame design is modified, compared to the previous TP series models, in order to ensure a comfortable experience.";
+		model="\CanikTP9SF\models\Canik_TP9SF_Elite.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Frame_Black_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome_co.paa"
+		};
+		hiddenSelectionsMaterials[] = {
+			"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+			"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome.rvmat"
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=150;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_damage.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_damage.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Frame_destruct.rvmat",
+								"CanikTP9SF\data\CanikTP9SF_Elite_Slide_RedChrome_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};	
 };
 class CfgMagazines
 {
@@ -673,7 +948,7 @@ class CfgMagazines
 	{
 		scope=2;
 		displayName="Canik TP9SF 50rnd Drum Magazine";
-		descriptionShort="The 18 round magazine for the Canik TP9SF.";
+		descriptionShort="The 50 round drum magazine for the Canik TP9SF.";
 		model="\CanikTP9SF\models\Mag_Canik_Tp9SF_50Drum.p3d";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[]=
@@ -739,8 +1014,171 @@ class CfgMagazines
 			};
 		};	
 	};
+	
+	// Elite default Mag
+	class Mag_Canik_TP9SF_Elite_18rnd: Mag_Canik_TP9SF_18rnd
+	{
+		scope=2;
+		displayName="Canik TP9SF Elite Weighted 18rnd Magazine";
+		descriptionShort="The 18 round magazine for the Canik TP9SF Elite.";
+		model="\CanikTP9SF\models\Mag_Canik_TP9SF_Elite.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Elite_Mag_co.paa"
+		};
+		hiddenSelectionsMaterials[] = {
+			"CanikTP9SF\data\CanikTP9SF_Elite_Mag.rvmat"
+		};
+		itemSize[]={1,2};
+		count=18;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Mag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Mag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"CanikTP9SF\data\CanikTP9SF_Elite_Mag_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};	
+	};
 };
+class CfgVehicles
+{
+	class PistolSuppressor;
+	class PistolSuppressor_Osprey_9: PistolSuppressor
+	{
+		scope = 2;
+		displayName = "Osprey Pistol Suppressor";
+		descriptionShort = "The Osprey is uniquely designed in a polygonal shape to allow for greater internal volume and better overall sound suppression. Due to the shape, the Osprey also sits below the shooter’s line of sight, thereby not impeding standard pistol sights. The updated version added a push-button locking system for quick and repeatable indexing. All of these features combined make it one of the sleekest and most iconic pistol suppressors on the market. The Osprey comes in the Osprey 9 and Osprey 45 options. ";
+		model = "CanikTP9SF\models\Silencer_Osprey_9.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"CanikTP9SF\data\Silencer_Osprey_9_co.paa"};
+		hiddenSelectionsMaterials[] = {
+			"CanikTP9SF\data\Silencer_Osprey_9.rvmat"
+		};
+		itemSize[]={3,1};
 
+	};
+	class PistolSuppressor_Osprey_9_Tan: PistolSuppressor_Osprey_9
+	{
+		scope = 2;
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"CanikTP9SF\data\Silencer_Osprey_9_Tan_co.paa"};
+	};
+	class PistolSuppressor_Osprey_9_Wizaru: PistolSuppressor_Osprey_9
+	{
+		scope = 2;
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"CanikTP9SF\data\Silencer_Osprey_9_Wizaru_co.paa"};
+	};
+	class PistolSuppressor_Osprey_9_RedChrome: PistolSuppressor_Osprey_9
+	{
+		scope = 2;
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"CanikTP9SF\data\Silencer_Osprey_9_RedChrome_co.paa"};
+		hiddenSelectionsMaterials[] = {
+			"CanikTP9SF\data\Silencer_Osprey_9_RedChrome.rvmat"
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=150;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"CanikTP9SF\data\Silencer_Osprey_9_RedChrome.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"CanikTP9SF\data\Silencer_Osprey_9_RedChrome.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"CanikTP9SF\data\Silencer_Osprey_9_RedChrome_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"CanikTP9SF\data\Silencer_Osprey_9_RedChrome_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"CanikTP9SF\data\Silencer_Osprey_9_RedChrome_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};
+};
 class CfgNonAIVehicles
 {
 
@@ -757,10 +1195,28 @@ class CfgNonAIVehicles
 		inventorySlot = "magazine";
 		model="\CanikTP9SF\models\Mag_Canik_Tp9SF_50Drum.p3d";
 	};
+	class ProxyMag_Canik_TP9SF_Elite: ProxyAttachment
+	{
+		scope = 2;
+		inventorySlot = "magazine";
+		model="\CanikTP9SF\models\Mag_Canik_TP9SF_Elite.p3d";
+	};
+	class ProxySilencer_Osprey_9: ProxyAttachment
+	{
+		scope = 2;
+		inventorySlot="pistolMuzzle";
+		model="\CanikTP9SF\models\Silencer_Osprey_9.p3d";
+	};
 	class ProxyCanik_TP9SF: ProxyAttachment
 	{
 		scope = 2;
 		inventorySlot = "pistol";
 		model="\CanikTP9SF\models\Canik_TP9SF.p3d";
+	};
+	class ProxyCanik_TP9SF_Elite: ProxyAttachment
+	{
+		scope = 2;
+		inventorySlot = "pistol";
+		model="\CanikTP9SF\models\Canik_TP9SF_Elite.p3d";
 	};
 };
