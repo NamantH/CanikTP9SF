@@ -282,6 +282,30 @@ class cfgWeapons
 			"\CanikTP9SF\data\CanikTP9SF_Slide_White_co.paa"
 		};
 	};
+	class Canik_TP9SF_GreyCamo: Canik_TP9SF {
+		scope=2;
+		displayName="Canik TP9SF";
+		descriptionShort="The TP9SF is a 9mm striker-fired pistol that has successfully passed 60,000 round torture tests without any failures, while still maintaining NATO standards for accuracy. With superior durability, reliability, and unparalleled trigger, the TP9SF pistol represents an ideal option for both competition or self defense minded users.";
+		model="\CanikTP9SF\models\Canik_TP9SF.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Frame_GreyCamo_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Slide_GreyCamo_co.paa"
+		};
+	};
+	class Canik_TP9SF_BlueCamo: Canik_TP9SF {
+		scope=2;
+		displayName="Canik TP9SF";
+		descriptionShort="The TP9SF is a 9mm striker-fired pistol that has successfully passed 60,000 round torture tests without any failures, while still maintaining NATO standards for accuracy. With superior durability, reliability, and unparalleled trigger, the TP9SF pistol represents an ideal option for both competition or self defense minded users.";
+		model="\CanikTP9SF\models\Canik_TP9SF.p3d";
+		hiddenSelections[] = {"Frame","Slide"};
+		hiddenSelectionsTextures[]=
+		{
+			"\CanikTP9SF\data\CanikTP9SF_Frame_BlueCamo_co.paa",
+			"\CanikTP9SF\data\CanikTP9SF_Slide_BlueCamo_co.paa"
+		};
+	};
 	class Canik_TP9SF_Chrome: Canik_TP9SF {
 		scope=2;
 		displayName="Canik TP9SF";
