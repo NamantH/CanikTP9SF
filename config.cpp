@@ -161,7 +161,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -327,7 +327,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -401,7 +401,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -475,7 +475,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -545,7 +545,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -722,7 +722,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
@@ -820,7 +820,7 @@ class cfgWeapons
 			{
 				class Health
 				{
-					hitpoints=150;
+					hitpoints=250;
 					healthLevels[]=
 					{
 						
